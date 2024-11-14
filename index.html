@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Car Dealership</title>
+	<!-- css -->
+	<link rel="stylesheet" href="./css/carStyles.css">
+	<!-- js -->
+	<script src="./js/usedCars.js" defer></script> <!-- Does this need defer? -->
+	<script src="./js/index.js" defer></script>
+</head>
+<body>
+	<!--header form section-->
+	<header class="header">
+		<div class="headerTitle">
+			<h2>Car Dealership</h2>
+		</div>
+		<!--Implementing the Filter Form as a Header Element-->
+		<div class="formWrapper">
+			<form id="carFilter">
+				<div class="year">
+					<label for="year">Year:</label>
+					<input type="text" name="yearMin" id="yearMin" placeholder="Min">
+					<label>-</label>
+					<input type="text" name="yearMax" id="yearMax" placeholder="Max">
+				</div>
+				<div class="make">
+					<label for="make">Make:</label>
+					<select name="make" id="make" multiple size="3"> <!-- Multiple allows for one or more selections -->
+						<option value="" disable selected hidden></option> <!--Attributes ensures blank is selected but not listed-->
+						<option value="Toyota">Toyota</option>
+						<option value="Honda">Honda</option>
+						<option value="Ford">Ford</option>
+						<option value="Nissan">Nissan</option>
+						<option value="Chevrolet">Chevrolet</option>
+						<option value="Volkswagen">Volkswagen</option>
+						<option value="Hyundai">Hyundai</option>
+						<option value="Subaru">Subaru</option>
+						<option value="Mazda">Mazda</option>
+						<option value="Kia">Kia</option>
+						<option value="Dodge">Dodge</option>
+						<option value="Cadillac">Cadillac</option>
+						<option value="Jaguar">Jaguar</option>
+						<option value="Tesla">Tesla</option>
+						<option value="Porsche">Porsche</option>
+						<option value="Lexus">Lexus</option>
+						<option value="BMW">BMW</option>
+					</select>
+				</div>
+				<div class="miles">
+					<label for="miles">Max Miles:</label>
+					<input type="text" name="miles" id="miles" placeholder="Miles">
+				</div>
+				<div class="price">
+					<label for="price">Max Price:</label>
+					<input type="text" name="price" id="price" placeholder="Price">
+				</div>
+				<div class="color">
+					<label for="color">Color:</label>
+					<select name="color" id="color" multiple size="3"> <!-- Multiple allows for one or more selections -->
+						<option value="" disable selected hidden></option> <!--Attributes ensures blank is selected but not listed-->
+						<option value="Silver">Silver</option>
+						<option value="White">White</option>
+						<option value="Black">Black</option>
+						<option value="Blue">Blue</option>
+						<option value="Red">Red</option>
+						<option value="Gray">Gray</option>
+						<option value="Green">Green</option>
+					</select>
+				</div>				
+				<button type="submit" id="filterBtn">Filter</button>
+			</form>
+		</div>
+	</header>
+	<!--results section-->
+	<section>
+		<!--display this if no results available-->
+		<!--<p>No cars match filter criteria. Please try again.</p>-->
+		<!--placeholder for dynamic contents-->
+		<div class="carContainer">
+			<div id="result"></div>
+		</div>
+	</section>
+</body>
+</html>

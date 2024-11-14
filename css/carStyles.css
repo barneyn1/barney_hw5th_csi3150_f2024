@@ -1,0 +1,108 @@
+/* Car Dealership Website Styles */
+/* Importing Poppins Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	/*Alt Box Model*/
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Poppins", Arial, Calibri;
+}
+
+
+/*Top Header Styles*/
+.header {
+	padding: 0 5px 7px 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #99cfe0;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#carFilter {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#carFilter div {
+	margin-right: 5px;
+}
+
+#carFilter input {
+	width: 65px;
+}
+
+.make {
+	display: flex;
+	align-items: center;
+}
+
+.make label {
+	margin-right: 5px;
+}
+
+.color {
+	display: flex;
+	align-items: center;
+}
+
+.color label {
+	margin-right: 5px;
+}
+
+#filterBtn {
+	padding: 4px 8px;
+	background-color: #cffaf3;
+	border: 1px solid rgb(0,0,0);
+	border-radius: 4px;
+}
+
+
+/*Styling Dynamic Contents*/
+.carContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+#result {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+	
+}
+
+#result .noResult {
+	margin: auto;
+}
+
+#result .resultCard {
+	margin: 15px;
+	padding: 15px;
+	border-radius: 15px;
+	background-color: #e2f8ff;
+}
+
+#result .resultCard .detailsBtn {
+	margin: 15px;
+	padding: 15px;
+	border-radius: 15px;
+	background-color: #99cfe0;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 1003px) {
+	.make select {
+		margin-top: 5px;
+	}
+
+	.color select {
+		margin-top: 5px;
+	}
+}
